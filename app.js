@@ -1,113 +1,150 @@
-
+var Id = 999;
 let ghazi = {
-    employeeID: 0001,
+    employeeID: 0,
     fullName: "Ghazi Samer",
     department: "Administration",
     salary:function (min, max) {
         return Math.floor(Math.random() * (max - min) ) + min;
+      },
+    
+    uniqeID: function () {
+          this.employeeID = Id + 1;
+         ++Id;
       }
        
 }
 let lana = {
-    employeeID: 0002,
+    employeeID: 0,
     fullName: "Lana Ali",
     department: "Finance",
     level: "Senior",
     salary: function (min, max) {
         return Math.floor(Math.random() * (max - min) ) + min;
-      }
+      },
+      uniqeID: function () {
+      this.employeeID = Id + 1;
+      ++Id;
+    }
 }
 let tamara = {
-    employeeID: 0003,
+    employeeID: 0,
     fullName: "Tamara Ayoub",
     department: "Marketing",
     level: "Senior",
     salary: function (min, max) {
         return Math.floor(Math.random() * (max - min) ) + min;
+      },
+      uniqeID: function () {
+        this.employeeID = Id + 1;
+        ++Id;
       }
 }
 let safi = {
-    employeeID: 0004,
+    employeeID: 0,
     fullName: "Safi Walid",
     department: "Administration",
     level: "Mid-Senior",
     salary: function (min, max) {
         return Math.floor(Math.random() * (max - min) ) + min;
+      },
+      uniqeID: function () {
+        this.employeeID = Id + 1;
+        ++Id;
       }
 }
 let omar = {
-    employeeID: 0005,
+    employeeID: 0,
     fullName: "Omar Zaid",
     department: "Development",
     level: "Senior",
     salary: function (min, max) {
         return Math.floor(Math.random() * (max - min) ) + min;
+      },
+      uniqeID: function () {
+        this.employeeID = Id + 1;
+        ++Id;
       }
       
 }
 let rana = {
-    employeeID: 0006,
+    employeeID: 0,
     fullName: "Rana Saleh",
     department: "Development",
     level: "Junior",
     salary: function (min, max) {
         return Math.floor(Math.random() * (max - min) ) + min;
+      },
+      uniqeID: function () {
+        this.employeeID = Id + 1;
+        ++Id;
       }
 }
 let hadi = {
-    employeeID: 0007,
+    employeeID: 0,
     fullName: "Hadi Ahmad",
     department: "Finance",
     level: "Mid-Senior",
     salary: function (min, max) {
         return Math.floor(Math.random() * (max - min) ) + min;
+      },
+      uniqeID: function () {
+        this.employeeID = Id + 1;
+        ++Id;
       }
     
 }
 
-var ghaziID = ghazi.employeeID + 999;
+ghazi.uniqeID(Id);
+var ghaziId = ghazi.employeeID;
+//console.log(ghaziId);
 console.log("Employee name: "+ ghazi.fullName);
 var ghaziNetSalary = ghazi.salary(1500, 2000);
 console.log("Employee salary: "+(ghaziNetSalary - (ghaziNetSalary * 0.075)));
 
 console.log("----");
-
-var lanaID = lana.employeeID + 999;
+lana.uniqeID();
+var lanaID = lana.employeeID;
+//console.log(lanaID);
 console.log("Employee name: "+lana.fullName);
 var lanaNetSalary = lana.salary(1500, 2000);
 console.log("Employee salary: "+(lanaNetSalary - (lanaNetSalary * 0.075)));
 
 console.log("----");
-
-var tamaraID = tamara.employeeID + 999;
+tamara.uniqeID();
+var tamaraID = tamara.employeeID;
+//console.log(tamaraID);
 console.log("Employee name: "+ tamara.fullName);
 var tamaraNetSalary = tamara.salary(1500, 2000);
 console.log("Employee salary: "+(tamaraNetSalary - (tamaraNetSalary * 0.075)));
 
 console.log("----");
-
-var safiID = safi.employeeID + 999;
+safi.uniqeID();
+var safiID = safi.employeeID;
+//console.log(safiID);
 console.log("Employee name: "+ safi.fullName);
 var safiNetSalary = safi.salary(1000, 1500);
 console.log("Employee salary: "+(safiNetSalary - (safiNetSalary * 0.075)));
 
 console.log("----");
-
-var omarID = omar.employeeID + 999;
+omar.uniqeID();
+var omarID = omar.employeeID;
+//console.log(omarID);
 console.log("Employee name: "+ omar.fullName);
 var omarNetSalary = omar.salary(1500, 2000);
 console.log("Employee salary: "+(omarNetSalary - (omarNetSalary * 0.075)));
 
 console.log("----");
-
-var ranaID = rana.employeeID + 999;
+rana.uniqeID();
+var ranaID = rana.employeeID;
+//console.log(ranaID);
 console.log("Employee name: "+ rana.fullName);
 var ranaNetSalary = rana.salary(500, 1000);
 console.log("Employee salary: "+(ranaNetSalary - (ranaNetSalary *0.075)));
 
 console.log("----");
-
-var hadiID = hadi.employeeID + 999;
+hadi.uniqeID();
+var hadiID = hadi.employeeID;
+//console.log(hadiID);
 console.log("Employee name: "+ hadi.fullName);
 var hadiNetSalary = hadi.salary(1000, 1500);
 console.log("Employee salary: "+(hadiNetSalary - (hadiNetSalary * 0.075)));
