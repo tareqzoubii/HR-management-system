@@ -68,46 +68,46 @@ let hadi = {
 var ghaziID = ghazi.employeeID + 999;
 console.log("Employee name: "+ ghazi.fullName);
 var ghaziNetSalary = ghazi.salary(1500, 2000);
-console.log("Employee salary: "+ghaziNetSalary);
+console.log("Employee salary: "+(ghaziNetSalary - (ghaziNetSalary * 0.075)));
 
 console.log("----");
 
 var lanaID = lana.employeeID + 999;
 console.log("Employee name: "+lana.fullName);
 var lanaNetSalary = lana.salary(1500, 2000);
-console.log("Employee salary: "+lanaNetSalary);
+console.log("Employee salary: "+(lanaNetSalary - (lanaNetSalary * 0.075)));
 
 console.log("----");
 
 var tamaraID = tamara.employeeID + 999;
 console.log("Employee name: "+ tamara.fullName);
 var tamaraNetSalary = tamara.salary(1500, 2000);
-console.log("Employee salary: "+tamaraNetSalary);
+console.log("Employee salary: "+(tamaraNetSalary - (tamaraNetSalary * 0.075)));
 
 console.log("----");
 
 var safiID = safi.employeeID + 999;
 console.log("Employee name: "+ safi.fullName);
 var safiNetSalary = safi.salary(1000, 1500);
-console.log("Employee salary: "+safiNetSalary);
+console.log("Employee salary: "+(safiNetSalary - (safiNetSalary * 0.075)));
 
 console.log("----");
 
 var omarID = omar.employeeID + 999;
 console.log("Employee name: "+ omar.fullName);
 var omarNetSalary = omar.salary(1500, 2000);
-console.log("Employee salary: "+omarNetSalary);
+console.log("Employee salary: "+(omarNetSalary - (omarNetSalary * 0.075)));
 
 console.log("----");
 
 var ranaID = rana.employeeID + 999;
 console.log("Employee name: "+ rana.fullName);
 var ranaNetSalary = rana.salary(500, 1000);
-console.log("Employee salary: "+ranaNetSalary);
+console.log("Employee salary: "+(ranaNetSalary - (ranaNetSalary *0.075)));
 
 console.log("----");
 
 var hadiID = hadi.employeeID + 999;
 console.log("Employee name: "+ hadi.fullName);
 var hadiNetSalary = hadi.salary(1000, 1500);
-console.log("Employee salary: "+hadiNetSalary);
+console.log("Employee salary: "+(hadiNetSalary - (hadiNetSalary * 0.075)));
