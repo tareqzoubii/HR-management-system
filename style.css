@@ -25,6 +25,7 @@ header {
     display: flex;
    justify-content: space-between;
    margin-bottom: 25px;
+   align-content: space-between;
 }
 .header-logo {
     width: 110px;
@@ -32,10 +33,12 @@ header {
 
 
 main {
-    margin: 188px;
-    background-color: white;
-    text-align: center;
+width:fit-content;
+display:flex;
+justify-content: space-around;
+align-content: space-around;
 
+    
 }
 footer {
     
