@@ -52,48 +52,49 @@ hadi.salary(1000, 1500);
 //console.log(hadi);
 const h1El = document.createElement(`h1`); // as a header
     h1El.textContent = (`Employee Card List`);
+    h1El.style.display = "flex";
     main[0].appendChild(h1El);
-
+const gh = document.createElement(`gh`);
+    main[0].appendChild(gh);
     Employees.prototype.render = function () {
-    //document.write(`<h1>Employee Name : ${this.fullName}<br><br><h1>Department : ${this.department} </h1><br><br><h1>Employee Salary : ${this.netSalary} </h1><br></h1>`)
-    const divEl = document.createElement(`div`);
-    divEl.style.backgroundColor = "#009688";
-    //divEl.style.display = "flex";
-    //divEl.style.alignItems = "center";
-    //divEl.style.justifyContent = "spaceAround";
-    //divEl.style.padding = "15px";
+      const card = document.createElement (`div`);
+      card.style.padding = "15px";
+      card.style.fontSize = "large";
+      card.style.display = "flexbox";
+      card.style.justifyContent = "space-around";
+      card.style.justifyItems = "space-around";
+      card.style.color = "black";
+      card.style.background = "white";
+      
+      gh.appendChild(card);
+      const imgEl = document.createElement(`img`);
+      imgEl.src = "./images/Ghazi.jpg";
+      imgEl.style.width = "130px";
+      imgEl.style.justifyContent = "space-around";
+      imgEl.style.justifyItems = "center";
+      imgEl.style.display = "flex";
+      card.appendChild(imgEl);
+      const nameEl = document.createElement(`span`);
+      nameEl.textContent = (`● Name: ${this.fullName}`);
+      nameEl.style.display = "flex";
+      card.appendChild(nameEl);
+      const idEl = document.createElement(`span`);
+      idEl.textContent = (`● ID: ${this.employeeId}`);
+      idEl.style.display = "flex";
+      card.appendChild(idEl);
+      const depEl = document.createElement(`span`);
+      depEl.textContent = (`● Department: ${this.department}`);
+      depEl.style.display = "flex";
+      card.appendChild(depEl);
+      const levelEl = document.createElement(`span`);
+      levelEl.textContent = (`● Level: ${this.level}`);
+      levelEl.style.display = "flex";
+      card.appendChild(levelEl);
+      const salaryEl = document.createElement(`span`);
+      salaryEl.textContent = (`● Salary: ${this.netSalary}$`);
+      salaryEl.style.display = "flex";
+      card.appendChild(salaryEl);
     
-    
-    main[0].appendChild(divEl);
-    const imgEl = document.createElement(`img`);
-    imgEl.src = "${this.image}";
-    imgEl.style.width = "60px";
-    divEl.appendChild(imgEl);
-    const nameEl = document.createElement(`p`);
-    nameEl.textContent = `Name: ${this.fullName}`;
-    nameEl.style.color = "black";
-    nameEl.style.padding = "10px";
-    divEl.appendChild(nameEl);
-    const idEl = document.createElement(`p`);
-    idEl.textContent = `ID: ${this.employeeId} `;
-    idEl.style.color = "black";
-    idEl.style.padding = "10px";
-    divEl.appendChild(idEl);
-    const depEl = document.createElement(`p`);
-    depEl.textContent = `Deperatment:${this.department}`;
-    depEl.style.color = "black";
-    depEl.style.padding = "10px";
-    divEl.appendChild(depEl);
-    const levEl = document.createElement(`p`);
-    levEl.textContent = `Level: ${this.level}`;
-    levEl.style.color = "black";
-    levEl.style.padding = "10px";
-    divEl.appendChild(levEl);
-    const salEl = document.createElement(`p`);
-    salEl.textContent = `Salary: ${this.netSalary}`;
-    salEl.style.color = "black";
-    salEl.style.padding = "10px";
-    divEl.appendChild(salEl);
 
   };
 ghazi.render();
