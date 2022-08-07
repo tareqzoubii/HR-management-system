@@ -30,10 +30,42 @@ header {
 .header-logo {
     width: 110px;
 }
-span {
-   display: flexbox;
-   
+h1El{
+    
+    display: flex
+    }
+    
+gh{
+        display: grid;
+        grid-template-columns: auto auto auto;
+        
 }
+    
+#div2{
+        width: 250px;
+        padding : 15px;
+        margin-left: 130px;
+        margin-bottom: 20px;
+        font-size : large;
+        color : white;
+        background: white;
+        background-color: #009688;
+        text-align: center;
+        
+        
+} 
+#div2 *{
+        display: flex;
+        justify-content: center;
+    
+        
+}
+#img2{
+        padding-bottom: 10px;
+        display: block;
+        margin: 0 auto;
+}
+
 footer {
     
     width: 100%;
@@ -54,12 +86,12 @@ p {
     margin-bottom: 15px;
 }
 #face {
-    color: blue;
+    color: white;
     font-size: large;
     margin-right: 20px;
 }
 #twit {
-    color: blue;
+    color: white;
     font-size: large;
 }
 h1 {

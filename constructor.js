@@ -1,13 +1,15 @@
 'use strict';
 //const body = document.getElementsByTagName(`body`);
 const main = document.getElementsByTagName(`main`);
+"./images/Ghazi.jpg"
 var render;
 var Id = 999;
-function Employees(nameValue, departmentValue, levelValue, employeeIdValue, netSalaryValue) {
+function Employees(nameValue, departmentValue, levelValue, employeeIdValue, imageValue, netSalaryValue) {
      this.fullName = nameValue;
      this.department = departmentValue;
      this.level = levelValue;
      this.employeeId = employeeIdValue;
+     this.image = imageValue;
      this.netSalary = netSalaryValue;
      this.uniqeID = function () {
           this.employeeId= Id + 1;
@@ -18,13 +20,13 @@ function Employees(nameValue, departmentValue, levelValue, employeeIdValue, netS
       }
 };
 
-const ghazi = new Employees("Ghazi Samer", "Administration", "Senior");
-const lana = new Employees("Lana Ali", "Finance", "Senior");
-const tamara = new Employees("Tamara Ayoub", "Marketing", "Senior");
-const safi = new Employees("Safi Walid", "Administration", "Mid-Senior");
-const omar = new Employees("Omar Zaid", "Development", "Senior");
-const rana = new Employees("Rana Saleh", "Development", "Junior");
-const hadi = new Employees("Hadi Ahmad", "Finance", "Mid-Senior");
+const ghazi = new Employees("Ghazi Samer", "Administration", "Senior", "./images/Ghazi.jpg");
+const lana = new Employees("Lana Ali", "Finance", "Senior", "./images/Lana.jpg");
+const tamara = new Employees("Tamara Ayoub", "Marketing", "Senior", "./images/Tamara.jpg");
+const safi = new Employees("Safi Walid", "Administration", "Mid-Senior", "./images/Safi.jpg");
+const omar = new Employees("Omar Zaid", "Development", "Senior", "./images/Omar.jpg");
+const rana = new Employees("Rana Saleh", "Development", "Junior", "./images/Rana.jpg");
+const hadi = new Employees("Hadi Ahmad", "Finance", "Mid-Senior", "./images/Hadi.jpg");
 
 
 
@@ -43,6 +45,7 @@ safi.salary(1000, 1500);
 omar.salary(1500, 2000);
 rana.salary(500, 1000);
 hadi.salary(1000, 1500);
+
 //console.log(ghazi);
 //console.log(lana);
 //console.log(tamara);
@@ -50,52 +53,46 @@ hadi.salary(1000, 1500);
 //console.log(omar);
 //console.log(rana);
 //console.log(hadi);
+
 const h1El = document.createElement(`h1`); // as a header
     h1El.textContent = (`Employee Card List`);
     h1El.style.display = "flex";
     main[0].appendChild(h1El);
-const gh = document.createElement(`gh`);
+
+    const gh = document.createElement(`gh`);
     main[0].appendChild(gh);
+    
     Employees.prototype.render = function () {
+  
       const card = document.createElement (`div`);
-      card.style.padding = "15px";
-      card.style.fontSize = "large";
-      card.style.display = "flexbox";
-      card.style.justifyContent = "space-around";
-      card.style.justifyItems = "space-around";
-      card.style.color = "black";
-      card.style.background = "white";
-      
+      card.setAttribute("id", "div2");
       gh.appendChild(card);
+      
       const imgEl = document.createElement(`img`);
-      imgEl.src = "./images/Ghazi.jpg";
-      imgEl.style.width = "130px";
-      imgEl.style.justifyContent = "space-around";
-      imgEl.style.justifyItems = "center";
-      imgEl.style.display = "flex";
+      imgEl.setAttribute("id", "img2");
+      imgEl.src = (` ${this.image} `);
       card.appendChild(imgEl);
+      
       const nameEl = document.createElement(`span`);
       nameEl.textContent = (`● Name: ${this.fullName}`);
-      nameEl.style.display = "flex";
       card.appendChild(nameEl);
+      
       const idEl = document.createElement(`span`);
       idEl.textContent = (`● ID: ${this.employeeId}`);
-      idEl.style.display = "flex";
       card.appendChild(idEl);
+      
       const depEl = document.createElement(`span`);
       depEl.textContent = (`● Department: ${this.department}`);
-      depEl.style.display = "flex";
       card.appendChild(depEl);
+      
       const levelEl = document.createElement(`span`);
       levelEl.textContent = (`● Level: ${this.level}`);
-      levelEl.style.display = "flex";
       card.appendChild(levelEl);
+      
       const salaryEl = document.createElement(`span`);
       salaryEl.textContent = (`● Salary: ${this.netSalary}$`);
-      salaryEl.style.display = "flex";
       card.appendChild(salaryEl);
-    
-
+  
   };
 ghazi.render();
 lana.render();
@@ -104,5 +101,3 @@ safi.render();
 omar.render();
 rana.render();
 hadi.render();
-
-
