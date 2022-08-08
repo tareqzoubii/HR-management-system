@@ -1,15 +1,12 @@
 'use strict';
-//const body = document.getElementsByTagName(`body`);
-const main = document.getElementsByTagName(`main`);
-"./images/Ghazi.jpg"
 var render;
 var Id = 999;
-function Employees(nameValue, departmentValue, levelValue, employeeIdValue, imageValue, netSalaryValue) {
+function Employees(nameValue, departmentValue, levelValue,imageValue, employeeIdValue, netSalaryValue) {
      this.fullName = nameValue;
      this.department = departmentValue;
      this.level = levelValue;
-     this.employeeId = employeeIdValue;
      this.image = imageValue;
+     this.employeeId = employeeIdValue;
      this.netSalary = netSalaryValue;
      this.uniqeID = function () {
           this.employeeId= Id + 1;
@@ -28,7 +25,7 @@ const omar = new Employees("Omar Zaid", "Development", "Senior", "./images/Omar.
 const rana = new Employees("Rana Saleh", "Development", "Junior", "./images/Rana.jpg");
 const hadi = new Employees("Hadi Ahmad", "Finance", "Mid-Senior", "./images/Hadi.jpg");
 
-
+console.log(ghazi);
 
 ghazi.uniqeID();
 lana.uniqeID();
@@ -54,13 +51,15 @@ hadi.salary(1000, 1500);
 //console.log(rana);
 //console.log(hadi);
 
+const main = document.getElementById(`main`);
+
 const h1El = document.createElement(`h1`); // as a header
     h1El.textContent = (`Employee Card List`);
     h1El.style.display = "flex";
-    main[0].appendChild(h1El);
+    main.appendChild(h1El);
 
     const gh = document.createElement(`gh`);
-    main[0].appendChild(gh);
+    main.appendChild(gh);
     
     Employees.prototype.render = function () {
   
@@ -70,7 +69,7 @@ const h1El = document.createElement(`h1`); // as a header
       
       const imgEl = document.createElement(`img`);
       imgEl.setAttribute("id", "img2");
-      imgEl.src = (` ${this.image} `);
+      imgEl.src = `${this.image}`;
       card.appendChild(imgEl);
       
       const nameEl = document.createElement(`span`);
@@ -94,6 +93,7 @@ const h1El = document.createElement(`h1`); // as a header
       card.appendChild(salaryEl);
   
   };
+  
 ghazi.render();
 lana.render();
 tamara.render();
